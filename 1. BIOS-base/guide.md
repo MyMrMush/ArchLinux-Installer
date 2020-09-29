@@ -71,7 +71,7 @@ install the base system:
     cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
     grep -E -A 1 ".*Germany.*$" /etc/pacman.d/mirrorlist.bak | sed '/--/d' > /etc/pacman.d/mirrorlist
 
-    pacstrap /mnt base base-devel linux-hardened linux-firmware vim bash-completion fish
+    pacstrap /mnt base base-devel linux linux-firmware vim bash-completion fish
     pacstrap /mnt wpa_supplicant netctl dialog networkmanager cronie cups avahi dbus acpid dhcpcd git 
     pacstrap /mnt xf86-input-synaptics lvm2 snapper
 
