@@ -11,12 +11,14 @@ Set the desired hostname for your system:
 
 
 Set the desired locale
+
     echo LANG=en_US.UTF-8 > /etc/locale.conf
 
 
 Uncomment all wanted locales from '/etc/locale.gen'
 
 Afterwards generate them:
+
     locale-gen
 
 
@@ -76,10 +78,12 @@ enable some useful services
 Install Grub bootloader:
 
 UEFI
+
     pacman -S grub os-prober efibootmgr gptfdisk dosfstools
     grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_linux --recheck
 
 Legacy/BIOS
+
     pacman -S grub os-prober dosfstools
     grub-install --target=i386-pc /dev/sda
 
