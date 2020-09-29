@@ -91,7 +91,7 @@ Legacy/BIOS
 Configure Grub:
 
     edit /etc/default/grub
-    add cryptdevice=/dev/sda2:lvm to GRUB_CMDLINE_LINUX=""
+    add cryptdevice=/dev/sdx2:lvm to GRUB_CMDLINE_LINUX=""
     grub-mkconfig -o /boot/grub/grub.cfg
 
 Now you can reboot into your system (exit; reboot) and/or continue with GUI installations.
